@@ -1,0 +1,35 @@
+    <section class="hero py-16">
+        <div class="container mx-auto flex items-center justify-between">
+            <div class="w-1/2">
+                <h6 class="text-lg"><em>Are you hungry?</em></h6>
+                <h1 class="text-6xl font-bold">Don't wait !</h1>
+                <button class="px-6 py-2 rounded-full text-white font-bold mt-4 btn-primary">
+                Order now</button>            
+            </div>
+            <div class="w-1/2"> 
+                <img src="img/hero-pizza.png" alt="hero-pizza" srcset="">
+            </div>
+        </div>
+    </section>
+    <section class="menu container mx-auto py-8">
+        <h1 class="text-xl font-bold mb-8">All pizzas</h1>
+             <div class="grid grid-cols-4  gap-x-8 gap-y-4">
+            <% pizzas.forEach(function(result){ %>
+                    <div class="w-64">
+                        <img class="h-40 mb-4 mx-auto" src="img/<%=result.image%>" alt="pizza" srcset="">
+                        <div class="text-center">
+                            <h2 class="mb-4 text-lg"><%=result.name%></h2>
+                            <span class="size py-1 px-4 rounded-full uppercase text-xs"><%=result.size%></span>
+                            <div class="flex items-center justify-around mt-6">
+                                <span>&#x20B9;<%=result.price%></span>
+                                <button data-pizza="<%=JSON.stringify(result)%>" class="add-to-cart py-1 px-6 rounded-full flex items-center">
+                                    <span>+</span>
+                                    <span class="ml-4">Add</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+            <%  }); %>
+        </div>
+    </section>
+ 
