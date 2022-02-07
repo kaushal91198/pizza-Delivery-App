@@ -1,4 +1,4 @@
-# mern-ecommerce
+# Pizza Delivery App (Nodejs,Ejs,Socket.io and mongodb)
 
 > Frontend-> EJS Template (NODEJS)
 
